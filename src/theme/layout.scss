@@ -1,0 +1,22 @@
+:root {
+  --main-blue: #345fc3;
+  --main-gray: #cccccc;
+  --main-blue-hover: #1747b8;
+  --main-pink: #d80286;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+.page-padding {
+  padding: 1em;
+}
+a {
+  color: var(--main-blue);
+  cursor: pointer;
+}
+.image-holder {
+  background-size: cover;
+  min-height: 100px;
+}

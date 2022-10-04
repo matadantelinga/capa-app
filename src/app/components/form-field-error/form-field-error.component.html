@@ -1,0 +1,5 @@
+<div class="error-message" *ngIf="control && control.touched && control.errors">
+  <div class="error-item" *ngFor="let errorMsg of getErrorMessages()">
+    {{ errorMsg }}
+  </div>
+</div>

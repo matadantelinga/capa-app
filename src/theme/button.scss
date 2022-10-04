@@ -1,0 +1,28 @@
+button {
+  padding: 0.75em 1em;
+  border-radius: 7px;
+  font-size: 14px;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+
+  &.btn-blue {
+    background-color: var(--main-blue);
+    color: #fff;
+    &:hover {
+      color: #fff;
+      box-shadow: inset 400px 0 0 0 var(--main-blue-hover);
+    }
+  }
+  &:disabled {
+    background-color: var(--ion-color-medium);
+    cursor: not-allowed;
+    box-shadow: none !important;
+  }
+  &.btn-round {
+    border-radius: 100%;
+  }
+  &.btn-full {
+    width: 100%;
+  }
+}
