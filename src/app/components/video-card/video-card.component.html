@@ -1,0 +1,23 @@
+<div class="video-card" *ngIf="video">
+  <div class="thumbnail">
+    <img [src]="video.thumbnail" alt="" />
+    <div class="play-button" (click)="openVideo(video.url)">
+      <ion-icon name="play-circle"></ion-icon>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="properties">
+      <h2 class="title">{{ video.title }}</h2>
+      <div class="author">
+        <div class="avatar">
+          <img [src]="video.user.avatar" alt="" />
+        </div>
+        <div class="name">{{ video.user.name }}</div>
+      </div>
+    </div>
+    <div class="btn-wrapper">
+      <button class="btn-blue btn-full">Subscribe</button>
+    </div>
+  </div>
+</div>

@@ -1,27 +1,28 @@
-#container {
-  text-align: center;
+.videos {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  .video-item {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0 15px;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+    @media (max-width: 767px) {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+ion-content {
+  --background: rgba(232, 232, 232, 0.8);
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+.section-title {
+  h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-family: "Poppins", sans-serif;
+  }
 }

@@ -9,7 +9,7 @@ import {
 import { Router } from '@angular/router';
 import SwiperCore, { Grid, Pagination, SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
-import { validateEmailPhone } from '../../../utils/form-validators';
+import { validateEmailPhone } from '../../utils/form-validators';
 // install Swiper modules
 SwiperCore.use([Grid, Pagination]);
 

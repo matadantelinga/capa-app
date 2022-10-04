@@ -1,0 +1,17 @@
+.bg-video {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  &__iframe {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+::ng-deep {
+  ion-modal {
+    --min-width: 60%;
+  }
+}

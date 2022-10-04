@@ -20,3 +20,46 @@ a {
   background-size: cover;
   min-height: 100px;
 }
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 576px) {
+    max-width: 560px;
+  }
+  @media (min-width: 768px) {
+    max-width: 960px;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+
+  @media (min-width: 1400px) {
+    max-width: 1320px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+
+.video-item {
+  &:hover {
+    animation: bounce 1.5s ease infinite;
+    -webkit-animation: bounce 1.5s ease infinite;
+    -moz-animation: bounce 1.5s ease infinite;
+    -o-animation: bounce 1.5s ease infinite;
+  }
+}

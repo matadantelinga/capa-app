@@ -1,0 +1,12 @@
+ul {
+  li {
+    padding: 7px 10px;
+    cursor: pointer;
+    transition: all ease-in 0.2s;
+    &:hover {
+      background-color: var(--main-blue);
+      color: #fff;
+      transition: all ease-out 0.2s;
+    }
+  }
+}

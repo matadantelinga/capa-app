@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
-import { validateEmailPhone } from 'src/utils/form-validators';
+import { validateEmailPhone } from 'src/app/utils/form-validators';
 import SwiperCore, { Grid, Pagination, SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
 
