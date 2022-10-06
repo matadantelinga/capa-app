@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedService } from 'src/app/services/shared.services';
+import { DataVideos } from 'src/app/utils/data';
 
 @Component({
   selector: 'app-home',
@@ -7,40 +8,7 @@ import { SharedService } from 'src/app/services/shared.services';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
-  dataVideos = [
-    {
-      title: 'Angular Tutorial for Beginners',
-      user: {
-        name: 'Programming with Mosh',
-        avatar: 'assets/avatar2.png',
-      },
-      url: 'https://www.youtube.com/watch?v=k5E2AVpwsko',
-    },
-    {
-      title: 'Ionic Tutorial',
-      user: {
-        name: 'Programming with Mosh',
-        avatar: 'assets/avatar2.png',
-      },
-      url: 'https://www.youtube.com/watch?v=5Gj4Y8zvl-s',
-    },
-    {
-      title: 'Angular Tutorial for Beginners',
-      user: {
-        name: 'Programming with Mosh',
-        avatar: 'assets/avatar2.png',
-      },
-      url: 'https://www.youtube.com/watch?v=k5E2AVpwsko',
-    },
-    {
-      title: 'Ionic Tutorial',
-      user: {
-        name: 'Programming with Mosh',
-        avatar: 'assets/avatar2.png',
-      },
-      url: 'https://www.youtube.com/watch?v=5Gj4Y8zvl-s',
-    },
-  ];
+  dataVideos = DataVideos;
 
   videos = [];
   constructor(private angShared: SharedService) {}
@@ -59,6 +27,7 @@ export class HomePage implements OnInit {
         },
         url: video.url,
         thumbnail: this.getThumbnail(video.url),
+        id: video.videoId,
       };
       this.videos.push(data);
     });

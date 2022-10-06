@@ -1,0 +1,75 @@
+<app-header></app-header>
+<ion-content [fullscreen]="true">
+  <section id="latest-video" class="container">
+    <div class="page-padding">
+      <ion-grid>
+        <ion-row class="ion-justify-content-center">
+          <ion-col sizeXs="12" sizeMd="6">
+            <div class="user-card">
+              <div class="card-title">
+                <h2>Subscribe Video</h2>
+              </div>
+              <div class="card-body">
+                <div class="order-details">
+                  <div class="order-item">
+                    <p>
+                      <span>Order ID #1029303</span> <br />
+                      Video Title : Ionic Tutorial
+                    </p>
+                    <p>Total Price: <strong>$30</strong></p>
+                  </div>
+                </div>
+                <form [formGroup]="paymentForm">
+                  <div class="input-group">
+                    <label>Name *</label>
+                    <input
+                      type="text"
+                      formControlName="name"
+                      class="form-control"
+                      [class.invalid]="formControl.name.invalid && formControl.name.touched"
+                    />
+                    <form-field-error
+                      [control]="formControl.name"
+                    ></form-field-error>
+                  </div>
+                  <div class="input-group">
+                    <label>Bank Name *</label>
+                    <input
+                      type="text"
+                      formControlName="bankName"
+                      class="form-control"
+                      [class.invalid]="formControl.bankName.invalid && formControl.bankName.touched"
+                    />
+                    <form-field-error
+                      [control]="formControl.bankName"
+                    ></form-field-error>
+                  </div>
+                  <div class="input-group">
+                    <label>Card Number *</label>
+                    <input
+                      type="text"
+                      formControlName="cardNumber"
+                      class="form-control"
+                      [class.invalid]="formControl.cardNumber.invalid && formControl.cardNumber.touched"
+                    />
+                    <form-field-error
+                      [control]="formControl.cardNumber"
+                    ></form-field-error>
+                  </div>
+                  <div class="btn-wrapper">
+                    <button class="btn-blue btn-full" (click)=" subscribe()">
+                      Submit
+                    </button>
+                    <button class="btn-full btn-line-gray" (click)="cancel()">
+                      Cancel
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </section>
+</ion-content>

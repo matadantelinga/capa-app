@@ -17,7 +17,13 @@
       </div>
     </div>
     <div class="btn-wrapper">
-      <button class="btn-blue btn-full">Subscribe</button>
+      <button
+        class="btn-blue btn-full"
+        [disabled]="isSubscribed"
+        (click)="subscribeVideo()"
+      >
+        {{ isSubscribed ? "Subscribed" : "Subscribe" }}
+      </button>
     </div>
   </div>
 </div>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PopoverController } from '@ionic/angular';
 import { UserMenuComponent } from '../user-menu/user-menu.component';
+import { User } from 'src/app/utils/data';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +10,11 @@ import { UserMenuComponent } from '../user-menu/user-menu.component';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  constructor(public popoverController: PopoverController) {}
+  user = User;
+  constructor(
+    private popoverController: PopoverController,
+    private router: Router
+  ) {}
 
   ngOnInit() {}
 
@@ -19,5 +25,9 @@ export class HeaderComponent implements OnInit {
       showBackdrop: false,
     });
     popover.present();
+  }
+
+  home() {
+    this.router.navigateByUrl('home');
   }
 }

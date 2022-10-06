@@ -1,11 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import {
-  AbstractControl,
-  FormBuilder,
-  ValidationErrors,
-  ValidatorFn,
-  Validators,
-} from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import SwiperCore, { Grid, Pagination, SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';

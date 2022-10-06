@@ -63,3 +63,36 @@ ul {
     -o-animation: bounce 1.5s ease infinite;
   }
 }
+
+.section-title {
+  h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+.subscribe-alert {
+  font-family: "Poppins", sans-serif;
+  .btn-line-gray {
+    &:hover {
+      border: none;
+    }
+  }
+  .btn-blue {
+    &:hover {
+      box-shadow: none !important;
+    }
+    span {
+      color: #ffffff !important;
+      justify-content: center;
+      padding: 7px 10px;
+      border-radius: 10px;
+      background-color: var(--main-blue);
+      &:hover {
+        color: #ffffff !important;
+        box-shadow: inset 400px 0 0 0 var(--main-blue-hover);
+      }
+    }
+  }
+}
